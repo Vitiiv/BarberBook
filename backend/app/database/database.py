@@ -1,0 +1,1 @@
+'''criar a conexão com o SQLite e a sessão do banco.'''
