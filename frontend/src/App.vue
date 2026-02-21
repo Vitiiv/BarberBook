@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { Toast } from 'primevue';
+</script>
+
 <template>
-  <h1>Hello World!</h1>
+	<Toast />
+	<RouterView class="h-screen" />
 </template>

@@ -1,5 +1,80 @@
-# Vue 3 + TypeScript + Vite
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── styles/
+│   │       └── main.css (Tailwind imports)
+│   │
+│   ├── components/
+│   │   ├── common/          # Componentes reutilizáveis
+│   │   │   ├── AppButton.vue
+│   │   │   ├── AppInput.vue
+│   │   │   └── AppModal.vue
+│   │   ├── layout/          # Componentes de layout
+│   │   │   ├── AppHeader.vue
+│   │   │   ├── AppSidebar.vue
+│   │   │   └── AppFooter.vue
+│   │   └── features/        # Componentes específicos por feature
+│   │       ├── agendamento/
+│   │       │   ├── CalendarioAgendamento.vue
+│   │       │   └── FormAgendamento.vue
+│   │       └── barbeiro/
+│   │           └── CardBarbeiro.vue
+│   │
+│   ├── views/               # Páginas/Rotas
+│   │   ├── auth/
+│   │   │   ├── LoginView.vue
+│   │   │   └── RegisterView.vue
+│   │   ├── cliente/
+│   │   │   ├── DashboardView.vue
+│   │   │   ├── AgendamentoView.vue
+│   │   │   └── HistoricoView.vue
+│   │   ├── barbeiro/
+│   │   │   ├── AgendaView.vue
+│   │   │   └── ClientesView.vue
+│   │   └── admin/
+│   │       ├── DashboardView.vue
+│   │       └── RelatoriosView.vue
+│   │
+│   ├── router/
+│   │   ├── index.ts         # Configuração principal
+│   │   └── guards.ts        # Guards de autenticação
+│   │
+│   ├── stores/              # Pinia stores
+│   │   ├── auth.ts          # Store de autenticação
+│   │   ├── agendamento.ts   # Store de agendamentos
+│   │   ├── barbeiro.ts      # Store de barbeiros
+│   │   └── user.ts          # Store do usuário logado
+│   │
+│   ├── services/            # Comunicação com API
+│   │   ├── api.ts           # Configuração base do axios
+│   │   ├── auth.service.ts
+│   │   ├── agendamento.service.ts
+│   │   └── barbeiro.service.ts
+│   │
+│   ├── composables/         # Composition API reusáveis
+│   │   ├── useAuth.ts
+│   │   ├── useToast.ts
+│   │   └── useForm.ts
+│   │
+│   ├── types/               # TypeScript types/interfaces
+│   │   ├── auth.types.ts
+│   │   ├── agendamento.types.ts
+│   │   ├── barbeiro.types.ts
+│   │   └── api.types.ts
+│   │
+│   ├── utils/               # Funções utilitárias
+│   │   ├── date.ts
+│   │   ├── format.ts
+│   │   └── validation.ts
+│   │
+│   ├── constants/           # Constantes da aplicação
+│   │   └── index.ts
+│   │
+│   ├── layouts/             # Layouts de páginas
+│   │   ├── DefaultLayout.vue
+│   │   ├── AuthLayout.vue
+│   │   └── AdminLayout.vue
+│   │
+│   ├── App.vue
+│   └── main.ts
